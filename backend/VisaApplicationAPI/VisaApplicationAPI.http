@@ -1,0 +1,6 @@
+@VisaApplicationAPI_HostAddress = http://localhost:5052
+
+GET {{VisaApplicationAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
