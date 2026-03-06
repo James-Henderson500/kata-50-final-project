@@ -11,3 +11,35 @@ Unit Testing:
 - Implement unit tests for backend API endpoints.
 - Ensure at least 80% code coverage.
 - Use NUnit as a testing framework for the API and React Testing Library with Jest for the frontend.
+
+```mermaid
+erDiagram
+
+    Country {
+        string Code PK
+        string Name
+    }
+
+    ApplicationStatus {
+        string Status PK
+    }
+
+    VisaType {
+        string Type PK
+    }
+
+    VisaApplication {
+        int Id PK
+        string ApplicantName
+        datetime DateOfBirth
+        string PassportNumber
+        string Nationality FK
+        datetime ApplicationDate
+        string Status FK
+        string VisaType FK
+    }
+
+    %% Relationships
+    Country ||--o{ VisaApplication : "Nationality"
+    ApplicationStatus ||--o{ VisaApplication : "Status"
+    VisaType ||--o{ VisaApplication : "VisaType"
