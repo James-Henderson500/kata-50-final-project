@@ -14,32 +14,33 @@ Unit Testing:
 
 ```mermaid
 erDiagram
+  COUNTRY ||--o{ VISAAPPLICATION : has
+  APPLICATIONSTATUS ||--o{ VISAAPPLICATION : uses
+  VISATYPE ||--o{ VISAAPPLICATION : uses
 
-    Country {
-        string Code PK
-        string Name
-    }
+  COUNTRY {
+    int Id PK
+    varchar Code
+    varchar Name
+  }
 
-    ApplicationStatus {
-        string Status PK
-    }
+  APPLICATIONSTATUS {
+    int Id PK
+    varchar Status
+  }
 
-    VisaType {
-        string Type PK
-    }
+  VISATYPE {
+    int Id PK
+    varchar Type
+  }
 
-    VisaApplication {
-        int Id PK
-        string ApplicantName
-        datetime DateOfBirth
-        string PassportNumber
-        string Nationality FK
-        datetime ApplicationDate
-        string Status FK
-        string VisaType FK
-    }
-
-    %% Relationships
-    Country ||--o{ VisaApplication : "Nationality"
-    ApplicationStatus ||--o{ VisaApplication : "Status"
-    VisaType ||--o{ VisaApplication : "VisaType"
+  VISAAPPLICATION {
+    int Id PK
+    varchar ApplicantName
+    date DateOfBirth
+    varchar PassportNumber
+    int Nationality FK
+    date ApplicationDate
+    int Status FK
+    int VisaType FK
+  }
