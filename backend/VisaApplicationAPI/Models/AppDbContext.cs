@@ -18,8 +18,13 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
         modelBuilder.Entity<VisaApplication>()
             .HasIndex(v => v.PassportNumber)
             .IsUnique();
+
+        //Default value for Application Date
+        modelBuilder.Entity<VisaApplication>()
+            .Property(v => v.ApplicationDate)
+            .HasDefaultValueSql("GETUTCDATE()");
         
-        //Relationships
+        //Relationships - Foreign Keys
         modelBuilder.Entity<VisaApplication>()
             .HasOne(v => v.Country)
             .WithMany()
