@@ -17,14 +17,12 @@ public class VisaApplication
     public required int Nationality { get; set; }
     [Column("ApplicationDate")]
     public required DateOnly ApplicationDate { get; set; }
-    [Column("StatusId")]
-    public required int StatusId {get; set; }
-    [Column("VisaTypeId")]
-    public required int VisaTypeId {get; set; }
-    [ForeignKey("Id")]
+    //Foreign keys
+    public int CountryId { get; set; }
+    public int StatusId { get; set; }
+    public int VisaTypeId { get; set; }
+    //Navigation properties
     public Country? Country { get; set; }
-    [ForeignKey("Id")]
     public ApplicationStatus? ApplicationStatus { get; set; }
-    [ForeignKey("Id")]
-    public VisaType? VisaType {get; set; }
+    public VisaType? VisaType { get; set; }
 }
