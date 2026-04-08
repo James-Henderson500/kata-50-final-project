@@ -9,4 +9,5 @@ public class VisaType
     public int Id { get; set; }
     [Column("TypeName")]
     public required string TypeName { get; set; }
+    public ICollection<VisaApplication> VisaApplications { get; set; }
 }

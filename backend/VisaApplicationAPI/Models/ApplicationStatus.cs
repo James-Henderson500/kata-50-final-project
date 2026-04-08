@@ -9,4 +9,5 @@ public class ApplicationStatus
     public int Id { get; set; }
     [Column("StatusName")]
     public required string StatusName {get; set; }
+    public ICollection<VisaApplication> VisaApplication { get; set; }
 }

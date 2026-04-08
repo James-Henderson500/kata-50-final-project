@@ -11,8 +11,6 @@ public class Country
     public required string CountryCode { get; set;}
     [Column("CountryName")]
     public required string CountryName {get; set; }
-    
-
-
+    public ICollection<VisaApplication> VisaApplication { get; set; }
 }
 
