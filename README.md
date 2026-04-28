@@ -20,27 +20,27 @@ erDiagram
 
   COUNTRY {
     int Id PK
-    varchar Code
-    varchar Name
+    string CountryCode
+    string CountryName
   }
 
   APPLICATIONSTATUS {
     int Id PK
-    varchar Status
+    string StatusName
   }
 
   VISATYPE {
     int Id PK
-    varchar Type
+    string TypeName
   }
 
   VISAAPPLICATION {
     int Id PK
-    varchar ApplicantName
-    date DateOfBirth
-    varchar PassportNumber
+    string ApplicantName
+    datetime DateOfBirth
+    string PassportNumber
+    datetime ApplicationDate
     int Nationality FK
-    date ApplicationDate
     int Status FK
     int VisaType FK
   }
