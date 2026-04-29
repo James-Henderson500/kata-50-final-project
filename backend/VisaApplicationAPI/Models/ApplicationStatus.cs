@@ -1,13 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VisaApp.Models;
+// Represents the status of a visa application:
+// New, Review, Approved, Rejected
+
+namespace VisaApplicationAPI.Models;
 
 public class ApplicationStatus
 {
-    [Key, Column("Id")]
+    //Primary key
     public int Id { get; set; }
-    [Column("StatusName")]
-    public required string StatusName {get; set; }
-    public ICollection<VisaApplication> VisaApplication { get; set; }
+    public string StatusName {get; set; }
 }

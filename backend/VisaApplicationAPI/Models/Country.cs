@@ -1,16 +1,17 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VisaApp.Models;
+// Represents the country associated with an applicant
+
+namespace VisaApplicationAPI.Models;
 
 public class Country
 {
-    [Key, Column("Id")]
+    //Primary key
     public int Id { get; set; }
-    [Column("CountryCode")]
-    public required string CountryCode { get; set;}
-    [Column("CountryName")]
-    public required string CountryName {get; set; }
-    public ICollection<VisaApplication> VisaApplication { get; set; }
+    //2 character short code to identify country
+    //e.g. GB - Great Britain
+    public string CountryCode { get; set; }
+    public string CountryName {get; set; }
 }
 

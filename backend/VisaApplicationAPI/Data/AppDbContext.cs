@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using VisaApplicationAPI.Models;
 
-namespace VisaApp.Models;
+namespace VisaApplicationAPI.Data;
+
+// Represents the Entity Framework Core database context for the application.
+// This class is responsible for configuring and managing access to the database.
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

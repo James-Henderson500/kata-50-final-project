@@ -1,13 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VisaApp.Models;
+//Represents the type of visa applied for:
+//Tourist, Work, Student
+
+namespace VisaApplicationAPI.Models;
 
 public class VisaType
 {
-    [Key, Column("Id")]
     public int Id { get; set; }
-    [Column("TypeName")]
-    public required string TypeName { get; set; }
-    public ICollection<VisaApplication> VisaApplications { get; set; }
+    public  string TypeName { get; set; }
 }
