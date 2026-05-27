@@ -8,13 +8,13 @@ namespace VisaApplicationAPI.DTOs.VisaApplications;
 public class CreateVisaApplicationDto
 {
     [Required]
-    public string ApplicantName { get; set; }
+    public string ApplicantName { get; set; } = "";
     [Required]
     public DateTime DateOfBirth { get; set; }
     [Required]
-    public string PassportNumber { get; set; }
+    public string PassportNumber { get; set; } = "";
     [Required]
-    public string Nationality { get; set; }
+    public string Nationality { get; set; } = "";
     [Required]
-    public string VisaType { get; set; }
+    public string VisaType { get; set; } = "";
 }

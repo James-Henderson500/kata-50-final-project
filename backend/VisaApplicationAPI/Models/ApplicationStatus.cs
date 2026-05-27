@@ -10,5 +10,5 @@ public class ApplicationStatus
 {
     //Primary key
     public int Id { get; set; }
-    public string StatusName {get; set; }
+    public string StatusName { get; set; } = "";
 }

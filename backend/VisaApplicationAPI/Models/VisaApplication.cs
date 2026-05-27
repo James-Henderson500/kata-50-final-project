@@ -9,16 +9,16 @@ public class VisaApplication
 {
     //Primary key
     public int Id { get; set; }
-    public string ApplicantName { get; set; } = string.Empty;
+    public string ApplicantName { get; set; } = "";
     public DateTime DateOfBirth { get; set; }
-    public  string PassportNumber { get; set; } = string.Empty;
+    public  string PassportNumber { get; set; } = "";
     public  DateTime ApplicationDate { get; set; }
 
     //Foreign keys & navigation properties
     public int CountryId { get; set; }
     public Country Nationality { get; set; }
     public int ApplicationStatusId { get; set; }
-    public ApplicationStatus Status {get; set; }
+    public ApplicationStatus Status { get; set; }
     public int VisaTypeId { get; set; }
     public VisaType VisaType { get; set; }
 }

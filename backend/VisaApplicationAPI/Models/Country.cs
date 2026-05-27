@@ -11,7 +11,7 @@ public class Country
     public int Id { get; set; }
     //2 character short code to identify country
     //e.g. GB - Great Britain
-    public string CountryCode { get; set; }
-    public string CountryName {get; set; }
+    public string CountryCode { get; set; } = "";
+    public string CountryName {get; set; } = "";
 }
 

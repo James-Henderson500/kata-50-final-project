@@ -27,6 +27,9 @@ public class VisaApplicationsController : ControllerBase
     // GET /api/visa-applications
     //Returns a list of all visa applications
     [HttpGet]
+
+    // Retrieves all visa applications, with optional filtering by status and visa type
+    // If no query parameters are provided, all applications are returned
     public async Task<ActionResult<IEnumerable<VisaApplicationListDto>>> GetAll(
         [FromQuery] string? status,
         [FromQuery] string? visaType)
